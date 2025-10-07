@@ -14,9 +14,9 @@
 int validate_loop(int size) {
     int flags[10] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};  // All valid flags (1 = pass)
     int all_valid = 1;
-
+    // Access 10 registers only not 11
     // TODO: Debug this loop - there's an off-by-one error
-    for (int i = 0; i <= size; i++) {
+    for (int i = 0; i < size; i++) {   
         if (flags[i] != 1) {
             all_valid = 0;
             break;
